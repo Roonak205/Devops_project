@@ -27,10 +27,10 @@ pipeline {
             steps {
                 echo 'Deploying application...'
                 sh '''
-                    docker stop my_dev_app_container || true
-                    docker rm my_dev_app_container || true
+                    docker stop my_app_container || true
+                    docker rm my_app_container || true
                     docker run -d \
-                        --my_dev_app_container \
+                        --my_app_container \
                         -p 3000:3000 \
                         my_dev_app:latest
                 '''
