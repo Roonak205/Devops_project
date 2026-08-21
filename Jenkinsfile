@@ -30,7 +30,7 @@ pipeline {
                     docker stop my_app_container || true
                     docker rm my_app_container || true
                     docker run -d \
-                        --my_app_container \
+                        --name my_app_container \
                         -p 3000:3000 \
                         my_dev_app:latest
                 '''
