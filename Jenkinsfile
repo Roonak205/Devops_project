@@ -19,7 +19,21 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image...'
-                sh 'cleardocker build -t my_dev_app .'
+                sh 'docker build -t my_dev_app:latest .'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application...'
+                sh '''
+                    docker stop my_container || true
+                    docker rm my_dcontainer || true
+                    docker run -d \
+                        --name my_dev_app_container \
+                        -p 3000:3000 \
+                        my_dev_app:latest
+                '''
             }
         }
     }
