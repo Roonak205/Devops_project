@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying application...'
                 sh '''
                     docker stop my_container || true
-                    docker rm my_dcontainer || true
+                    docker rm my_container || true
                     docker run -d \
                         --name my_dev_app_container \
                         -p 3000:3000 \
