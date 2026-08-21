@@ -11,6 +11,10 @@ app.get("/health", (req, res) => {
     res.json({
         status: "UP"
     });
+app.get("/check", (req, res) => {
+    res.json({
+        status: "down"
+    });
 });
 
 app.listen(PORT, () => {
