@@ -19,7 +19,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t my_dev_app .'
+                sh 'cleardocker build -t my_dev_app .'
             }
         }
     }
