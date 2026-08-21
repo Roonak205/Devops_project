@@ -16,11 +16,10 @@ pipeline {
             }
         }
 
-
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t devops-node-app .'
+                sh 'sudo docker build -t my_dev_app .'
             }
         }
     }
