@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 
 app.get("/health", (req, res) => {
     res.json({
-        status: "Best Performing than before"
+        status: "Best Performing than before huuuuu "
     });
 
    
@@ -17,5 +17,5 @@ app.get("/health", (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`The Serverrrrr running on port ${PORT}`);
 });
