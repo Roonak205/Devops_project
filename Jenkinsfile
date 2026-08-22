@@ -23,7 +23,7 @@ pipeline {
                 // Clear old files from the Nginx directory
                 sh 'rm -rf /var/www/html/*'
                 
-                // Copy all project files to the Nginx web folder
+                  // Copy all project files to the Nginx web folder
                 sh 'cp -r * /var/www/html/'
             }
 
